@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Админ-панель — 100 шагов вперёд</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="admin-hero">
+    <nav class="topbar">
+      <span class="brand">SPACE</span>
+      <a href="index.html">Страница партнёра</a>
+    </nav>
+    <h1>Админ-панель “100 шагов вперёд”</h1>
+    <p>В первой версии это демонстрационная панель. После подключения Google Таблицы здесь будет отображаться реальный прогресс всех партнёров.</p>
+  </header>
+
+  <main class="layout">
+    <section id="adminStats" class="admin-stats"></section>
+
+    <section class="admin-grid">
+      <div class="table-wrap">
+        <h2>Партнёры</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>ФИО</th>
+              <th>Статус</th>
+              <th>Выполнено</th>
+              <th>Прогресс</th>
+              <th>Последний шаг</th>
+              <th>Активность</th>
+              <th>Рекомендация</th>
+            </tr>
+          </thead>
+          <tbody id="partnersTable"></tbody>
+        </table>
+      </div>
+      <aside id="partnerDetails" class="details-panel"></aside>
+    </section>
+
+    <section class="integration-panel">
+      <h2>Будущая интеграция</h2>
+      <div class="flow">
+        <span>Партнёр отмечает шаг</span>
+        <b>→</b>
+        <span>данные уходят в Google Таблицу</span>
+        <b>→</b>
+        <span>админ видит прогресс</span>
+        <b>→</b>
+        <span>наставник помогает вовремя</span>
+      </div>
+    </section>
+  </main>
+
+  <script src="steps.js"></script>
+  <script src="admin.js"></script>
+</body>
+</html>

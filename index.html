@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>100 шагов вперёд</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="hero">
+    <nav class="topbar">
+      <span class="brand">SPACE</span>
+      <a href="admin.html">Админ-панель</a>
+    </nav>
+    <div class="hero-grid">
+      <section class="hero-copy">
+        <p class="eyebrow">Маршрут нового партнёра</p>
+        <h1>100 шагов вперёд</h1>
+        <p class="subtitle">Пошаговый маршрут нового партнёра SPACE</p>
+        <p class="intro">Здесь собраны шаги, материалы, ссылки и задания, которые помогут вам войти в работу спокойно, понятно и без потерянных инструкций.</p>
+      </section>
+      <section class="partner-panel" aria-label="Данные партнёра">
+        <label for="partnerName">Имя и фамилия партнёра</label>
+        <input id="partnerName" type="text" placeholder="Например, Анна Смирнова" autocomplete="name">
+        <div class="mini-note">Имя сохранится только в этом браузере.</div>
+      </section>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="progress-panel">
+      <div class="progress-text">
+        <div>
+          <h2>Общий прогресс</h2>
+          <p id="progressCount">Выполнено 0 из 0 шагов</p>
+        </div>
+        <strong id="progressPercent">0%</strong>
+      </div>
+      <div class="progress-track" aria-label="Прогресс маршрута">
+        <div id="progressBar" class="progress-fill"></div>
+      </div>
+      <p id="motivation" class="motivation">Начало положено. Главное — сделать первый шаг.</p>
+      <div class="report-actions">
+        <button id="copyReport" class="button primary">Скопировать отчёт о прогрессе</button>
+        <button id="downloadReport" class="button">Скачать отчёт в текстовом виде</button>
+        <button id="resetProgress" class="button danger">Сбросить прогресс</button>
+      </div>
+    </section>
+
+    <section class="filters" aria-label="Фильтры шагов">
+      <button class="filter active" data-filter="all">Все шаги</button>
+      <button class="filter" data-filter="done">Выполненные</button>
+      <button class="filter" data-filter="todo">Невыполненные</button>
+      <button class="filter" data-filter="required">Обязательные</button>
+      <button class="filter" data-filter="blocks">По блокам</button>
+    </section>
+
+    <section id="stepsContainer" class="steps-container" aria-live="polite"></section>
+  </main>
+
+  <script src="steps.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
